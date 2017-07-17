@@ -2,9 +2,9 @@
 
 <ThingDefs>
 	<ThingDef ParentName="BaseMeleeWeapon_Blunt">
-		<defName>MeleeWeapon_Whip</defName>
-		<label>Whip</label>
-		<description>A simple weapon, just fibers bound together to make a whipping weapon that has a sturdy leather handle.</description>
+		<defName>Wooden_Pick</defName>
+		<label>Wooden Pickaxe</label>
+		<description>A simple pickaxe just made out of wood. Almost completely useless!</description>
 		<graphicData>
 			<texPath>Pickaxe</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -15,19 +15,15 @@
 			<li>NeolithicMelee</li>
 		</weaponTags>
 		<statBases>
-			<WorkToMake>500</WorkToMake>
+			<WorkToMake>300</WorkToMake>
 			<Mass>2</Mass>
 			<MeleeWeapon_DamageAmount>10</MeleeWeapon_DamageAmount>
 			<MeleeWeapon_Cooldown>1.5</MeleeWeapon_Cooldown>
 		</statBases>
 		<equippedAngleOffset>-65</equippedAngleOffset>
 		<costStuffCount>30</costStuffCount>
-    <costList>
-      <Component>4</Component>
-      <Plasteel>90</Plasteel>
-    </costList>
 		<stuffCategories>
-			<li>Leathery</li>
+			<li>Woody</li>
 		</stuffCategories>
 		<equippedStatOffsets>
 		<WorkSpeedGlobal>0.02</WorkSpeedGlobal>
@@ -35,8 +31,6 @@
 		</equippedStatOffsets>
 		<recipeMaker>
 			<recipeUsers>
-				<li>ElectricSmithy</li>
-				<li>FueledSmithy</li>
 				<li>CraftingSpot</li>
 			</recipeUsers>
 		</recipeMaker>
