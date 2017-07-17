@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/StatDef[defName="MiningSpeed"]/defaultBaseValue</xpath>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/StatDef[defName="MiningSpeed"]</xpath>
+            <value>
+                <defaultBaseValue>0.01</defaultBaseValue>
+            </value>
+    </Operation>
+</Patch>
