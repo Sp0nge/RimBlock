@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="ItemToolsBase" Abstract="True">
+      <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <selectable>True</selectable>
+    <pathCost>10</pathCost>
+    <useHitPoints>False</useHitPoints>
+		<techLevel>Medieval</techLevel>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+			<Beauty>-2</Beauty>
+			<SellPriceFactor>0.70</SellPriceFactor>
+		</statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+	<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.33,0.33,0.33,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.65,0.65,0.65,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.4,0.3,0.15,1)</only>
+				</li>
+				<li>
+					<weight>15</weight>
+					<min>RGBA(0.3,0.3,0.3,1)</min>
+					<max>RGBA(0.5,0.5,0.5,1)</max>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>RGBA(0.5,0.5,0.5,1)</min>
+					<max>RGBA(1,1,1,1)</max>
+				</li>
+			</options>
+		</colorGenerator>
+  </ThingDef>
+  
+	<ThingDef Name="ItemToolsMakeableBase" ParentName="ItemToolsBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+		<li>CraftingSpot</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  
+	<ThingDef ParentName="ItemToolsMakeableBase">
+		<defName>Item_axewooden</defName>
+		<label>Wooden Axe</label>
+		<description>A simple pickaxe just made out of wood. Almost completely useless!</description>
+		<graphicData>
+		<texPath>WoodenAxe</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<weaponTags>
+			<li>Neolithic</li>
+			<li>NeolithicMelee</li>
+		</weaponTags>
+		<statBases>
+			<WorkToMake>400</WorkToMake>
+			<Mass>1</Mass>
+			<MeleeWeapon_DamageAmount>10</MeleeWeapon_DamageAmount>
+			<MeleeWeapon_Cooldown>1.5</MeleeWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<costStuffCount>30</costStuffCount>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<equippedStatOffsets>
+		<PlantWorkSpeed>0.10</PlantWorkSpeed>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<recipeUsers>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+			<li>CraftingSpot</li>
+		</recipeUsers>
+		</recipeMaker>
+		<verbs>
+		<li>
+			<verbClass>Verb_MeleeAttack</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<meleeDamageDef>Blunt</meleeDamageDef>
+		</li>
+	</verbs>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>Hands</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>Outlander</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  
+	<ThingDef ParentName="ItemToolsMakeableBase">
+		<defName>Item_woodenpick</defName>
+		<label>Wooden Pickaxe</label>
+		<description>A simple pickaxe just made out of wood. Almost completely useless!</description>
+		<graphicData>
+			<texPath>Pickaxe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Neolithic</techLevel>
+		<weaponTags>
+			<li>Neolithic</li>
+			<li>NeolithicMelee</li>
+		</weaponTags>
+		<statBases>
+			<WorkToMake>300</WorkToMake>
+			<Mass>1</Mass>
+			<MeleeWeapon_DamageAmount>10</MeleeWeapon_DamageAmount>
+			<MeleeWeapon_Cooldown>2.5</MeleeWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<costStuffCount>30</costStuffCount>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<equippedStatOffsets>
+		<MiningSpeed>0.10</MiningSpeed>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+		</recipeMaker>
+		<verbs>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<meleeDamageDef>Blunt</meleeDamageDef>
+			</li>
+		</verbs>
+		    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>Hands</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>Outlander</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+	</ThingDef>
+</ThingDefs>  
