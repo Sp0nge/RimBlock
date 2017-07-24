@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StuffCategoryDef>
+    <defName>RimBlock_Handle</defName>
+    <label>Handle</label>
+  </StuffCategoryDef>
+  
+   <StuffCategoryDef>
+    <defName>Rimblock_Head</defName>
+    <label>Head</label>
+  </StuffCategoryDef> 
+  
+</Defs>

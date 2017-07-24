@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="CombatExtended.PatchOperationFindMod">
+				<modName>Weapon Tech A17</modName>
+			</li>
+			<!-- Arquebus -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_Arquebus</defName>
+				<statBases>
+					<Mass>4.2</Mass>
+					<RangedWeapon_Cooldown>6.00</RangedWeapon_Cooldown>
+					<SightsEfficiency>0.50</SightsEfficiency>
+					<ShotSpread>0.17</ShotSpread>
+					<SwayFactor>0.9</SwayFactor>
+					<Bulk>10.25</Bulk>
+				</statBases>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<projectileDef>Projectile_SlingBullet_Stone</projectileDef>
+					<warmupTime>0.6</warmupTime>
+					<range>20</range>
+					<soundCast>ShotSniperRifle</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+					<muzzleFlashScale>16</muzzleFlashScale>
+				</Properties>
+				<costList>
+					<WoodLog>8</WoodLog>
+					<Steel>40</Steel>
+					<Component>1</Component>
+				</costList>
+				<AmmoUser>
+					<magazineSize>1</magazineSize>
+					<reloadTime>4</reloadTime>
+					<ammoSet>AmmoSet_SlingBullet</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+				<weaponTags>
+					<li>CE_Sidearm</li>
+				</weaponTags>
+			</li>
+			<!-- Breech-loader -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_BreechLoader</defName>
+				<statBases>
+					<SightsEfficiency>0.60</SightsEfficiency>
+					<ShotSpread>0.17</ShotSpread>
+					<SwayFactor>0.9</SwayFactor>
+					<Bulk>10.25</Bulk>
+				</statBases>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<projectileDef>Projectile_SlingBullet_Stone</projectileDef>
+					<range>30</range>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>1</magazineSize>
+					<reloadTime>3</reloadTime>
+					<ammoSet>AmmoSet_SlingBullet</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+				<weaponTags>
+					<li>CE_Sidearm</li>
+				</weaponTags>
+			</li>
+			<!-- Revolver -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_Revolver</defName>
+				<statBases>
+					<SightsEfficiency>0.70</SightsEfficiency>
+					<ShotSpread>0.15</ShotSpread>
+					<SwayFactor>0.8</SwayFactor>
+					<Bulk>2.35</Bulk>
+				</statBases>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<projectileDef>Bullet_22LR_FMJ</projectileDef>
+					<range>20</range>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>6</magazineSize>
+					<reloadTime>4</reloadTime>
+					<ammoSet>AmmoSet_22LR</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+				<weaponTags>
+					<li>CE_Sidearm</li>
+				</weaponTags>
+			</li>
+			<!-- Pump Shotgun -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_PumpShotgun</defName>
+				<statBases>
+					<SightsEfficiency>0.80</SightsEfficiency>
+					<ShotSpread>0.35</ShotSpread>
+					<SwayFactor>0.8</SwayFactor>
+					<Bulk>10.35</Bulk>
+				</statBases>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<projectileDef>Bullet_44-40Winchester_FMJ</projectileDef>
+					<range>16</range>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>2</magazineSize>
+					<reloadTime>2</reloadTime>
+					<ammoSet>AmmoSet_44-40Winchester</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+				<weaponTags>
+					<li>CE_Sidearm</li>
+				</weaponTags>
+			</li>
+			<!-- Lever-Action -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_Repeater</defName>
+				<statBases>
+					<SightsEfficiency>0.65</SightsEfficiency>
+					<ShotSpread>0.15</ShotSpread>
+					<SwayFactor>0.6</SwayFactor>
+					<Bulk>10.35</Bulk>
+				</statBases>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<projectileDef>Bullet_44-40Winchester_FMJ</projectileDef>
+					<range>28</range>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>1</magazineSize>
+					<reloadTime>2</reloadTime>
+					<ammoSet>AmmoSet_44-40Winchester</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+				<weaponTags>
+					<li>CE_Sidearm</li>
+				</weaponTags>
+			</li>
+			<!-- Battle Rifle -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Gun_SLR</defName>
+				<statBases>
+					<SightsEfficiency>0.75</SightsEfficiency>
+					<ShotSpread>0.07</ShotSpread>
+					<SwayFactor>0.5</SwayFactor>
+					<Bulk>10.35</Bulk>
+				</statBases>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<projectileDef>Bullet_556x45mmNATO_FMJ</projectileDef>
+					<range>28</range>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>20</magazineSize>
+					<reloadTime>2</reloadTime>
+					<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+				<weaponTags>
+					<li>CE_Sidearm</li>
+				</weaponTags>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

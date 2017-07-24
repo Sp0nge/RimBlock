@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase" Name="RimBlockHeadBase" Abstract="True">
+    <description>Base component for making tools, Cant make any tools without this!</description>
+    <graphicData>
+      <texPath>StoneHead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<stackLimit>1</stackLimit>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.075</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>Tools</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <stuffProps>
+      <categories>
+        <li>Tools</li>
+      </categories>
+      <commonality>0.20</commonality> <!-- because there are so many stone types -->
+      <statFactors>
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>2.4</MaxHitPoints>
+        <Flammability>0</Flammability>
+        <WorkToBuild>6.0</WorkToBuild>
+		<WorkToMake>1.3</WorkToMake>
+        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+    <ThingDef ParentName="RimBlockHeadBase">
+    <defName>HeadToolSandstone</defName>
+    <label>sandstone toolhead</label>
+    <description>Head of solid sandstone.</description>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>sandstone</stuffAdjective>
+      <statFactors>
+        <Beauty>1.1</Beauty>  
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>1.4</MaxHitPoints>
+		<WorkToBuild>5.0</WorkToBuild>
+		<WorkToMake>1.1</WorkToMake>
+		<PlantWorkSpeed>0.10</PlantWorkSpeed>
+		<MiningSpeed>0.10</MiningSpeed>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+	<RecipeDef ParentName="RimBlockMakeStoneHeadBase">
+		<defName>RimBlockMakeStoneHeadSandstone</defName>
+		<label>make sandstone heads</label>
+		<description>Cuts sandstone chunks into usable toolheads.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BlocksSandstone</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>BlocksSandstone</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<HeadToolSandstone>1</HeadToolSandstone>
+		</products>
+	</RecipeDef>
+
+    <ThingDef ParentName="RimBlockHeadBase">
+    <defName>HeadToolGranite</defName>
+    <label>Granite toolhead</label>
+    <description>Head of solid granite</description>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>Granite</stuffAdjective>
+      <statFactors>
+        <Beauty>1.1</Beauty>  
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>1.4</MaxHitPoints>
+		<WorkToBuild>5.0</WorkToBuild>
+		<WorkToMake>1.1</WorkToMake>
+		<PlantWorkSpeed>0.10</PlantWorkSpeed>
+		<MiningSpeed>0.10</MiningSpeed>
+      </statFactors>
+    </stuffProps>
+	</ThingDef>
+  
+	<RecipeDef ParentName="RimBlockMakeStoneHeadBase">
+		<defName>RimBlockMakeStoneHeadGranite</defName>
+		<label>make Granite heads</label>
+		<description>Cuts Granite chunks into usable toolheads.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BlocksGranite</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>BlocksGranite</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<HeadToolGranite>1</HeadToolGranite>
+		</products>
+	</RecipeDef>
+
+  <ThingDef ParentName="RimBlockHeadBase">
+    <defName>HeadToolLimestone</defName>
+    <label>Limestone toolhead</label>
+    <description>Head of solid Limestone.</description>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>Limestone</stuffAdjective>
+      <statFactors>
+        <Beauty>1.1</Beauty>  
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>1.4</MaxHitPoints>
+		<WorkToBuild>5.0</WorkToBuild>
+		<WorkToMake>1.1</WorkToMake>
+		<PlantWorkSpeed>0.10</PlantWorkSpeed>
+		<MiningSpeed>0.10</MiningSpeed>
+      </statFactors>
+    </stuffProps>
+	</ThingDef>
+  
+	<RecipeDef ParentName="RimBlockMakeStoneHeadBase">
+		<defName>RimBlockMakeStoneHeadLimestone</defName>
+		<label>make Limestone heads</label>
+		<description>Cuts Limestone chunks into usable toolheads.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BlocksLimestone</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>BlocksLimestone</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<HeadToolLimestone>1</HeadToolLimestone>
+		</products>
+	</RecipeDef>
+
+  <ThingDef ParentName="RimBlockHeadBase">
+    <defName>HeadToolSlate</defName>
+    <label>Slate toolhead</label>
+    <description>Head of solid Slate.</description>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>Slate</stuffAdjective>
+      <statFactors>
+        <Beauty>1.1</Beauty>  
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>1.4</MaxHitPoints>
+		<WorkToBuild>5.0</WorkToBuild>
+		<WorkToMake>1.1</WorkToMake>
+		<PlantWorkSpeed>0.10</PlantWorkSpeed>
+		<MiningSpeed>0.10</MiningSpeed>
+      </statFactors>
+    </stuffProps>
+	</ThingDef>
+  
+	<RecipeDef ParentName="RimBlockMakeStoneHeadBase">
+		<defName>RimBlockMakeStoneHeadSlate</defName>
+		<label>make Slate heads</label>
+		<description>Cuts Slate chunks into usable toolheads.</description>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BlocksSlate</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>BlocksSlate</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<HeadToolSlate>1</HeadToolSlate>
+		</products>
+	</RecipeDef>
+	
+</Defs>

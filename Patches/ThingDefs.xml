@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>		
+		<Operation Class="PatchOperationAdd">
+			<xpath>*/ThingDef[defName="BlocksSandstone"]/stuffProps/statFactors</xpath>
+				<value>
+					<PlantWorkSpeed>0.50</PlantWorkSpeed>
+				</value>
+		</Operation>
+		
+		<Operation Class="PatchOperationAdd">
+			<xpath>*/ThingDef[defName="BlocksSandstone"]</xpath>
+				<value>
+					<butcherProducts>
+						<HeadToolSandstone>1</HeadToolSandstone>
+					</butcherProducts>
+				</value>
+		</Operation>
+
+		<Operation Class="PatchOperationAdd">
+			<xpath>*/ThingDef[defName="BlocksGranite"]</xpath>
+				<value>
+					<butcherProducts>
+						<HeadToolGranite>1</HeadToolGranite>
+					</butcherProducts>
+				</value>
+		</Operation>
+		
+		<Operation Class="PatchOperationAdd">
+			<xpath>*/ThingDef[defName="BlocksLimestone"]</xpath>
+				<value>
+					<butcherProducts>
+						<HeadToolLimestone>1</HeadToolLimestone>
+					</butcherProducts>
+				</value>
+		</Operation>
+
+		<Operation Class="PatchOperationAdd">
+			<xpath>*/ThingDef[defName="BlocksSlate"]</xpath>
+				<value>
+					<butcherProducts>
+						<HeadToolSlate>1</HeadToolSlate>
+					</butcherProducts>
+				</value>
+		</Operation>
+</Patch>
